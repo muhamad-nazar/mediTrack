@@ -1,123 +1,189 @@
-🧰 Teknologi yang Digunakan
-Tool / Framework	Versi / Keterangan
-Laravel	12.x
-PHP	8.2+
-Composer	2.x
-MySQL	5.7 / 8.0 (via XAMPP/Laragon)
-XAMPP/Laragon	8.2+/6.0+
-Bootstrap	5
-FontAwesome	5
-Chart.js	v4 (untuk grafik di dashboard)
-SweetAlert2	(untuk notifikasi interaktif)
-Blade	Laravel Blade Templating
-Git	(untuk version control)
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>README | MediTrack Laravel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-left: 4px solid #007BFF;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
 
-✅ Cara Install Project 
-🔁 1. Clone repository atau Unduh Code
-Jika Clone Ketik ini di Terminal : 
-git clone https://github.com/muhamad-nazar/mediTrack.git
+<h1>🧰 Teknologi yang Digunakan</h1>
 
-lalu buka Project di VSCode
+<table>
+  <thead>
+    <tr><th>Tool / Framework</th><th>Versi / Keterangan</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Laravel</td><td>12.x</td></tr>
+    <tr><td>PHP</td><td>8.2+</td></tr>
+    <tr><td>Composer</td><td>2.x</td></tr>
+    <tr><td>MySQL</td><td>5.7 / 8.0 (via XAMPP/Laragon)</td></tr>
+    <tr><td>XAMPP/Laragon</td><td>8.2+ / 6.0+</td></tr>
+    <tr><td>Bootstrap</td><td>5</td></tr>
+    <tr><td>FontAwesome</td><td>5</td></tr>
+    <tr><td>Chart.js</td><td>v4 (grafik di dashboard)</td></tr>
+    <tr><td>SweetAlert2</td><td>Notifikasi interaktif</td></tr>
+    <tr><td>Blade</td><td>Laravel Blade Templating</td></tr>
+    <tr><td>Git</td><td>Version control</td></tr>
+  </tbody>
+</table>
 
-📦 2. Install dependency Laravel
-untuk menginstall ketik perintah
-composer install
-di terminal
+<h2>✅ Cara Install Project</h2>
 
-⚙️ 3. Copy file .env dan generate key
-karena .env.example nya sudah saya ubah sesuai dengan yang saya pakai, maka langsung copy saja dengan mengetikan perintah di terminal
-cp .env.example .env atau copy .env.example .env jika di windows
-setelah itu ketik perintah di terminal
-php artisan key:generate
+<h3>🔁 1. Clone repository atau Unduh Code</h3>
+<pre><code>git clone https://github.com/muhamad-nazar/mediTrack.git
+cd mediTrack</code></pre>
 
-Jika sudah maka lihat .env nya apa sudah terisi bagian DB nya
-DB_DATABASE=meditrack
+<h3>📦 2. Install dependency Laravel</h3>
+<pre><code>composer install</code></pre>
+
+<h3>⚙️ 3. Salin file .env & generate key</h3>
+<pre><code>cp .env.example .env
+# atau di Windows
+copy .env.example .env
+
+php artisan key:generate</code></pre>
+
+<h3>🛠️ 4. Atur Database</h3>
+<pre><code>DB_DATABASE=meditrack
 DB_USERNAME=root
-DB_PASSWORD=
+DB_PASSWORD=</code></pre>
 
-jika belum bisa diisi sesuai .sql yang sudah saya Upload di Folder dengan nama meditrack.sql
-<img width="897" height="792" alt="image" src="https://github.com/user-attachments/assets/8baeda10-e03f-48f9-88a8-5065e44d76f5" />
+<p>
+Jika belum, kamu bisa:
+<ul>
+  <li>Import database <code>meditrack.sql</code> yang saya sertakan</li>
+  <li>Atau jalankan <code>php artisan migrate</code></li>
+</ul>
+</p>
 
+<h3>🚀 5. Jalankan project</h3>
+<pre><code>php artisan serve</code></pre>
 
-untuk Database bisa  import dari yang saya kasih atau migrate/buat baru dengan perintah
-php artisan migrate
-di terminal
+<p>Buka di browser: <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a></p>
 
-Jika Sudah, Maka tinggal jalankan Project nya Menggunakan Perintah
-php artisan serve di terminal
+<h3>🔐 Akun Demo (Jika Import SQL)</h3>
+<ul>
+  <li>Email: <code>admin@mediTrack.com</code></li>
+  <li>Password: <code>admin321</code></li>
+</ul>
 
-Jika Mengimport Database dari sql yang saya Upload untuk Login nya: 
-Email: admin@mediTrack.com
-Pass : admin321
+<hr>
 
-Untuk Halaman Login: 
-<img width="1920" height="916" alt="image" src="https://github.com/user-attachments/assets/bf2e0c08-29de-43d8-a38e-73384d8d3337" />
+<h2>🖼️ Tampilan Halaman</h2>
 
-Halaman Dashboard : 
-<img width="1918" height="900" alt="image" src="https://github.com/user-attachments/assets/8ac58d30-de59-4116-89de-8c8f21507cde" />
+<h4>Login</h4>
+<img src="https://github.com/user-attachments/assets/bf2e0c08-29de-43d8-a38e-73384d8d3337" alt="Login">
 
-Halaman Data Pasien : 
-<img width="1918" height="911" alt="image" src="https://github.com/user-attachments/assets/b676bcdd-7003-424f-b010-b4bc1bce2f0c" />
+<h4>Dashboard</h4>
+<img src="https://github.com/user-attachments/assets/8ac58d30-de59-4116-89de-8c8f21507cde" alt="Dashboard">
 
-Halaman Daftar Kunjungan : 
-<img width="1916" height="905" alt="image" src="https://github.com/user-attachments/assets/a0434fac-8cf7-40c9-97b6-0da052cb462a" />
+<h4>Data Pasien</h4>
+<img src="https://github.com/user-attachments/assets/b676bcdd-7003-424f-b010-b4bc1bce2f0c" alt="Pasien">
 
-Halaman Detail Kunjungan : 
-<img width="1917" height="911" alt="image" src="https://github.com/user-attachments/assets/058d7def-f7a6-4a9e-807c-3ae18f820d6a" />
+<h4>Daftar Kunjungan</h4>
+<img src="https://github.com/user-attachments/assets/a0434fac-8cf7-40c9-97b6-0da052cb462a" alt="Kunjungan">
 
-Halaman Riwayat Kunjungan : 
-<img width="1920" height="907" alt="image" src="https://github.com/user-attachments/assets/3df7735a-801f-485b-9382-55bffc4ce9e7" />
+<h4>Detail Kunjungan</h4>
+<img src="https://github.com/user-attachments/assets/058d7def-f7a6-4a9e-807c-3ae18f820d6a" alt="Detail Kunjungan">
 
-Halaman Detail Riwayat Kunjungan : 
-<img width="1920" height="917" alt="image" src="https://github.com/user-attachments/assets/8fac30af-2b01-43b3-981d-b44af64314b8" />
+<h4>Riwayat Kunjungan</h4>
+<img src="https://github.com/user-attachments/assets/3df7735a-801f-485b-9382-55bffc4ce9e7" alt="Riwayat">
 
-Halaman Update User : 
-<img width="1920" height="899" alt="image" src="https://github.com/user-attachments/assets/8c4bc7f1-6245-4a7d-93a8-9a13c04cfa68" />
+<h4>Detail Riwayat Kunjungan</h4>
+<img src="https://github.com/user-attachments/assets/8fac30af-2b01-43b3-981d-b44af64314b8" alt="Detail Riwayat">
 
+<h4>Profile User</h4>
+<img src="https://github.com/user-attachments/assets/8c4bc7f1-6245-4a7d-93a8-9a13c04cfa68" alt="Profile">
 
+<hr>
 
-🗂 Struktur Folder Project
-app/
+<h2>🗂 Struktur Folder Project</h2>
+
+<pre><code>app/
 ├── Http/
 │   ├── Controllers/
-│   │   ├── PagesController.php       # Handle halaman dashboard, pasien, kunjungan, riwayat
-│   │   ├── AddController.php         # Menangani tambah data
-│   │   ├── UpdateController.php      # Menangani update data
-│   │   ├── DeleteController.php      # Menangani hapus data
-│   │   └── AuthController.php        # Menangani login/logout
+│   │   ├── PagesController.php       # Halaman dashboard, pasien, kunjungan, riwayat
+│   │   ├── AddController.php         # Tambah data
+│   │   ├── UpdateController.php      # Update data
+│   │   ├── DeleteController.php      # Hapus data
+│   │   └── AuthController.php        # Login/logout
 │   └── Middleware/
 │       └── Authenticate.php          # Proteksi login
-│
+
 ├── Models/
-│   ├── Patient.php                   # Model untuk data pasien
-│   ├── Visit.php                     # Model untuk data kunjungan
-│   └── User.php                      # Model default user Laravel
+│   ├── Patient.php                   # Model pasien
+│   ├── Visit.php                     # Model kunjungan
+│   └── User.php                      # Model user
 
 resources/
 ├── views/
 │   ├── pages/
 │   │   ├── admin/
-│   │   │   ├── pasien.blade.php      # Halaman data pasien
-│   │   │   ├── kunjungan.blade.php   # Halaman daftar kunjungan
-│   │   │   ├── riwayat.blade.php     # Halaman riwayat kunjungan
-│   │   │   │    ├── data/
-│   │   │   │    |    |    └── kunjungan.blade.php      # Detail kunjungan
-│   │   │   │    |    |    └── riwayat.blade.php      # Detail riwayat
+│   │   │   ├── pasien.blade.php
+│   │   │   ├── kunjungan.blade.php
+│   │   │   ├── riwayat.blade.php
+│   │   │   └── data/
+│   │   │       ├── kunjungan.blade.php
+│   │   │       └── riwayat.blade.php
 │   │   ├── auth/
-│   │   │   └── login.blade.php       # Halaman login
-│   │   │   └── profile.blade.php       # Halaman Profile user
-│   │   └── index.blade.php           # Dashboard utama
+│   │   │   ├── login.blade.php
+│   │   │   └── profile.blade.php
+│   │   └── index.blade.php
 │   └── partials/
-│       └── template.blade.php        # Template layout utama (header, sidebar, dsb)
+│       └── template.blade.php        # Layout utama
 
 routes/
-├── web.php                           # Semua route aplikasi (web)
+└── web.php                           # Semua route aplikasi
 
 public/
-├── assets/                           # Berisi icon, gambar, atau asset statis
-│   └── img/
-│       ├── undraw_profile.svg
-│       └── undraw_profile_1.svg
-├── index.php                         # Entry point aplikasi
+└── assets/
+    └── img/
+        ├── undraw_profile.svg
+        └── undraw_profile_1.svg
 
-.env                                   # Konfigurasi database & environment
+.env                                   # Konfigurasi environment
+</code></pre>
+
+</body>
+</html>
