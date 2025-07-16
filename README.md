@@ -2,48 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>README | MediTrack Laravel</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      padding: 2rem;
-      max-width: 960px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
-    code {
-      background: #f4f4f4;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-    pre {
-      background: #f4f4f4;
-      padding: 1rem;
-      border-left: 4px solid #007BFF;
-      overflow-x: auto;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 1.5rem;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 0.75rem;
-      text-align: left;
-    }
-    th {
-      background-color: #f0f0f0;
-    }
-    img {
-      max-width: 100%;
-      border: 1px solid #ccc;
-      margin-bottom: 1rem;
-    }
-  </style>
+ 
 </head>
 <body>
 
